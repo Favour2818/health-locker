@@ -3,13 +3,12 @@ import { motion } from "framer-motion";
 import useHealthLocker from "../hooks/useHealthLocker";
 import useFhevmSetup from "../hooks/useFhevmSetup";
 import { MEDICAL_CATEGORIES } from "../utils/categories";
-import { useAccount, useChainId } from "wagmi";
+import { useChainId } from "wagmi";
 import { useNavigate } from "react-router-dom";
 import ConnectWalletButton from "../components/ConnectWalletButton";
 
 
 export default function Dashboard() {
-const { isConnected } = useAccount();
 const chainId = useChainId();
 const navigate = useNavigate();
 
@@ -25,7 +24,6 @@ const [isDecrypted, setIsDecrypted] = useState(false);
 
 const showMessage = (msg: string) => setMessage(msg);
 
-// if (!isConnected) return <div className="warning-box">🔌 Connect wallet</div>;
 if (chainId !== 11155111) return <div className="warning-box">⚠ Switch to Sepolia</div>;
 
 return (

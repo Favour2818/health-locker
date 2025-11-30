@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useAccount } from "wagmi";
 import ConnectWalletButton from "../components/ConnectWalletButton";
 
 function Home() {

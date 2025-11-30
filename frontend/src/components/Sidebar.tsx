@@ -1,6 +1,5 @@
-import { FaHome, FaChartPie, FaFolder, FaCog } from "react-icons/fa";
+import { FaHome, FaChartPie,FaCog } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import ConnectWalletButton from "./ConnectWalletButton";
 
 function Sidebar() {
 const { pathname } = useLocation();
